@@ -1,6 +1,5 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
-url = "https://docs.google.com/spreadsheets/d/1v6tnxDsjtZm6RV9zZqr3AWBh_6qk-LrayslweRase2Y/gviz/tq?sheet=New_Zealand&headers=1&tq=";
 raw_data_thai_url = "https://docs.google.com/spreadsheets/d/1NAowDCSPZAo1NStiV_E2gp4QOCjUnG4VK_a_mhtxOfg/edit?usp=sharing/gviz/tq?sheet=Raw_Data_Thai&headers=1&tq=";
 
 function drawChart() {
@@ -32,10 +31,9 @@ function handleAlldepartmentLineResponse(response) {
   var data = response.getDataTable();
 
   var options = {
-    title: "กราฟแสดงการเปลี่ยนแปลงของงบประมาณแต่ละกรมในกระทรวงพลังงาน",
-    subtitle : "หน่วย ( ล้านบาท )",
+    title: "การเปลี่ยนแปลงของงบประมาณแต่ละกรมในกระทรวงพลังงาน",
     vAxis:{
-        title: 'งบประมาณ'
+        title: 'งบประมาณ ( ล้านบาท )'
     },
     hAxis: {
         title: 'ปีพุทธศักราช (พ.ศ.)'
@@ -57,10 +55,9 @@ function handleMinistryLineResponse(response) {
   var data = response.getDataTable();
 
   var options = {
-    title: "กราฟแสดงการเปลี่ยนแปลงของงบประมาณของกระทรวงพลังงาน",
-    subtitle : "หน่วย ( ล้านบาท )",
+    title: "การเปลี่ยนแปลงของงบประมาณของกระทรวงพลังงาน",
     vAxis:{
-        title: 'งบประมาณ'
+        title: 'งบประมาณ ( ล้านบาท )'
     },
     hAxis: {
         title: 'ปีพุทธศักราช (พ.ศ.)'
@@ -73,61 +70,6 @@ function handleMinistryLineResponse(response) {
   rev_line.draw(data, options);
 }
 
-function handleRevAreaResponse(response) {
-  if (response.isError()) {
-    errorAlert(response);
-    return;
-  }
-  var data = response.getDataTable();
-
-  var options_fullStacked = {
-    title : "Government's Revenue Factors",
-    isStacked: "relative",
-    legend: { position: "right", maxLines: 3 },
-    vAxis: {
-      format: "#%",
-      minValue: 0,
-      ticks: [2552,2554,2556,2558,2560,2562]
-    },
-    hAxis: {
-      format:'#',
-      title: "year"
-    }
-  };
-  
-  var rev_area = new google.visualization.AreaChart(
-    document.getElementById("NZ_rev_area_div")
-  );
-  rev_area.draw(data, options_fullStacked);
-}
-
-function handleGDPAreaResponse(response) {
-  if (response.isError()) {
-    errorAlert(response);
-    return;
-  }
-  var data = response.getDataTable();
-
-  var options_fullStacked = {
-    title : "GDP Factors",
-    isStacked: "relative",
-    legend: { position: "right", maxLines: 3 },
-    vAxis: {
-      format: "#%",
-      minValue: 0,
-      ticks: [2552,2554,2556,2558,2560,2562]
-    },
-    hAxis: {
-      format:'#',
-      title: "year"
-    }
-  };
-  
-  var gdp_area = new google.visualization.AreaChart(
-    document.getElementById("NZ_gdp_area_div")
-  );
-  gdp_area.draw(data, options_fullStacked);
-}
 
 
 
