@@ -1,74 +1,160 @@
+    
 <!DOCTYPE html>
-<html lang="en">
-    <style>
-        #bg {
-            background-color: #5FCDF2; /* For browsers that do not support gradients */
-            background-image: linear-gradient(#5FCDF2, #FEFFF7); /* Standard syntax (must be last) */
-        }
-        #addbg{
-            width: 900px;
-            padding-bottom: 50px;
-            background-color: white;
-        }
-    </style>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ministry of Energy of Thailand</title>
+  <script type="text/javascript" src="onepagescroll.js"></script>
+  <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background: #E2E4E7;
+      padding: 0;
+      text-align: center;
+      font-family: 'open sans';
+      position: relative;
+      margin: 0;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrapper {
+    	height: 100% !important;
+    	height: 100%;
+    	margin: 0 auto; 
+    	overflow: hidden;
+    }
+    
+    .main {
+        background-color: #5FCDF2;
+        background-image: linear-gradient(#5FCDF2, #FEFFF7);
+        float: left;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .main h1 {
+      padding:150px 50px;
+      float: left;
+      width: 100%;
+      font-size: 45px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: 100;
+      color: white;
+      margin: 0;
+    }
+ 
+    header {
+      position: relative;
+      z-index: 10;
+    }
+    .main section  {
+      overflow: hidden;
+    }   
+    .main section.page1 {
+      background:rgb(230, 217, 200);
+    }
+    .main section.page1 h1 {
+      float: none;
+      width: 1000px;
+      display: block;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 15px;
+      font-size: 44px;
+      color: black;
+    }
+    .main section.page2 {
+      background: no-repeat center -150px ;
+    }
+    .main section.page3 {
+      background: no-repeat 156px -150px ;
+    }
 
-        <!-- Google chart -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    body.disabled-onepage-scroll .onepage-wrapper  section {
+      min-height: 100%;
+      height: auto;
+    }
+    
+  </style>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Other -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
 
-        <!-- Local js -->
-        <script src="./resources/js/load_component.js" type="text/javascript"></script>
-        <script src="./resources/js/index.js" type="text/javascript"></script>
+      <!-- Google chart -->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-        <title>Ministry of Energy of Thailand</title>
-    </head>
+      <!-- Other -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <body>
-        <div id = "bg">
-            <div id="nav_bar"></div>
+      <!-- Local js -->
+      <script src="./resources/js/load_component.js" type="text/javascript"></script>
+      <script src="./resources/js/index.js" type="text/javascript"></script>
 
-            <div class="container" style="padding-top: 20px;">
-                <h1 style="padding-bottom: 20px">Ministry of Energy of Thailand</h1>
-                <div align="center" style="padding-bottom: 20px;">
-                    <h2 style="padding-left:40px"> Ministry of Energy's budget provided </h2>
-                    <div id="Ministry_line" style="width: 900px; height: 500px;"></div>
-                    <div id="addbg">
-                        กราฟแสดงการเปลี่ยนแปลงของงบประมาณของกระทรวงพลังงานโดยแสดงเป็น Line Chart </br>
-                        เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562
-                    </div>
-                    <div id="All_Sub_Depart_line" style="width: 900px; height: 500px;"></div>
-                    <div id="addbg">
-                        กราฟแสดงการเปลี่ยนแปลงของงบประมาณแต่ละกรมในสังกัตกระทรวงพลังงานโดยแสดงเป็น Line Chart </br>
-                        เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562
-                         
-                    </div>
-                    <div id="Ministry_step" style="width: 900px; height: 450px;"></div>
-                    <div id="addbg">
-                        กราฟข้างต้นแสดงให้ถึงเปอร์เซ็นทีของงบประมาณที่ใช้ในแต่ละปี ซึ่งจากกราฟทำให้ทราบว่าในแต่ละปี</br>
-                        งบประมาณโดยมากใช้ไปกับกรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน และ สํานักงานปลัดกระทรวงพลังงาน
-                    </div>
-                    
-                </div>
-
-            </div>
+      <title>Ministry of Energy of Thailand</title>
+</head>
+<body>
+    
+    <div class="wrapper">	
+	  <div class="main">
+	    
+      <section class="page1">
+        <h1 style="padding-bottom: 20px">Ministry of Energy of Thailand's budget provided</h1>
+            <div align="center" style="padding-bottom: 20px;">
                 
+                <div id="Ministry_line" style="width: 900px; height: 500px;"></div>
+                <div style="width: 900px; height: 100px;">
+                    กราฟแสดงการเปลี่ยนแปลงของงบประมาณของกระทรวงพลังงานโดยแสดงเป็น Line Chart </br>
+                    เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562
+                </div>
+                <footer ><font size="2"><b>Tip:</b> This is a Final project of 01204314 Statistics for Computer Engineering Applications.</font></footer>
+  	        </div>
+      </section>
+	    
+	    <section class="page2">
+          <div align="center" style="padding-bottom: 20px;padding-top: 50px;">
+            <div id="All_Sub_Depart_line" style="width: 900px; height: 500px;"></div>
+            <div style="width: 900px; height: 100px;">
+                กราฟแสดงการเปลี่ยนแปลงของงบประมาณแต่ละกรมในสังกัตกระทรวงพลังงานโดยแสดงเป็น Line Chart </br>
+                เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562
+            </div>
+            <footer ><font size="2"><b>Tip:</b> This is a Final project of 01204314 Statistics for Computer Engineering Applications.</font></footer>
+
+  	      </div>
+      </section>
+	    
+	    <section class="page3">
+        <div align="center" style="padding-bottom: 20px;padding-top: 50px;">
+            <div id="Ministry_step" style="width: 900px; height: 500px;"></div>
+            <div style="width: 900px; height: 100px;">
+              กราฟข้างต้นแสดงให้ถึงเปอร์เซ็นทีของงบประมาณที่ใช้ในแต่ละปี ซึ่งจากกราฟทำให้ทราบว่าในแต่ละปี</br>
+              งบประมาณโดยมากใช้ไปกับกรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน และ สํานักงานปลัดกระทรวงพลังงาน
+            </div>
             <footer ><font size="2"><b>Tip:</b> This is a Final project of 01204314 Statistics for Computer Engineering Applications.</font></footer>
 
         </div>
-
-    
-    </body>
+      </section>
+    </div>
+    </div>
+  <script>
+	 onePageScroll(".main", {
+     sectionContainer: "section",
+     loop: true,
+     responsiveFallback: false
+   });
+		
+	</script>
+</body>
 </html>
