@@ -42,11 +42,27 @@ function handleAlldepartmentLineResponse(response) {
     hAxis: {
         title: 'ปีพุทธศักราช (พ.ศ.)'
     },
+    fontName: 'Prompt, sans-serif',
+    curveType:'function',
+    series: [
+      {color: '#edc951'}, 
+      {color: '#eb6841'}, 
+      {color: '#cc2a36'},
+      {color: '#4f372d'},
+      {color: '#00a0b0'},
+      {color: '#89B288'}
+    ],
+    animation: {
+      startup: true,
+        duration: 1200,
+        easing: 'inAndOut',
+    },
   };
 
   var gdp_line = new google.visualization.LineChart(
     document.getElementById("All_Sub_Depart_line")
   );
+ 
   gdp_line.draw(data, options);
 }
 
@@ -65,6 +81,13 @@ function handleMinistryLineResponse(response) {
     },
     hAxis: {
         title: 'ปีพุทธศักราช (พ.ศ.)'
+    },
+    fontName: 'Prompt, sans-serif',
+    smoothLine: true,
+    animation: {
+      startup: true,
+        duration: 1200,
+        easing: 'inAndOut',
     },
   };
 
@@ -95,6 +118,16 @@ function handleMinistryStep(response) {
         hAxis: {
             title: 'ปีพุทธศักราช (พ.ศ.)'
         },
+        fontName: 'Prompt, sans-serif',
+        areaOpacity: 0.95,
+        series: [
+          {color: '#F8B195'}, 
+          {color: '#F67280'}, 
+          {color: '#C06C84'},
+          {color: '#6C5B7B'},
+          {color: '#355C7D'},
+          {color: '#594F4F'}
+        ],
     };
   
     var rev_line = new google.visualization.SteppedAreaChart(

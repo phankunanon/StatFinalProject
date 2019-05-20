@@ -20,6 +20,8 @@
     
     <!-- Local CSS -->
     <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Prompt|Ubuntu&display=swap" rel="stylesheet">
     <title>Ministry of Energy of Thailand</title>
 
     <style>
@@ -34,8 +36,8 @@
         }
         
         .main {
-            background-color: #5FCDF2;
-            background-image: linear-gradient(#5FCDF2, #FEFFF7);
+            background-color: #efefed;
+            background-image: linear-gradient(#efefed, #FEFFF7);
             float: left;
             width: 100%;
             margin: 0 auto;
@@ -55,44 +57,93 @@
         }
     
         header {
-        position: relative;
-        z-index: 10;
+            position: relative;
+            z-index: 10;
         }
         .main section  {
-        overflow: hidden;
+            overflow: hidden;
         }   
-        .main section.page1 {
-        background:rgb(230, 217, 200);
+        .main section.title-page {
+            background: no-repeat 50% fixed / cover;
+            background-image: url("78786.jpg");
+            background-position: center;
         }
-        .main section.page1 h1 {
-        float: none;
-        width: 1000px;
-        display: block;
-        text-align: center;
-        padding: 0;
-        margin-bottom: 15px;
-        font-size: 44px;
-        color: black;
+        .heading {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            top: 50%;
+        }
+        .main section.title-page h1 {
+            float: none;
+            width: auto;
+            display: block;
+            text-align: center;
+            padding: 30px;
+            font-size: 44px;
+            color: black;
+            font-family: 'Ubuntu', sans-serif;
+            background: rgba(255, 255, 255, 0.534);
+        }
+        .main section.page1 {
+            background:#efefed;
+            background-image: url("787862.jpg");
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: top left;
+            background-attachment: scroll;
+        }
+        
+        .main section.page1 #description-page1{
+            font-family: 'Prompt', sans-serif;
         }
         .main section.page2 {
-        background: rgba(202, 158, 169, 0.877) no-repeat center -150px ;
+            /* background: rgba(202, 158, 169, 0.877) no-repeat center -150px ; */
+            background:#efefed;
+            background-image: url("787864.jpg");
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: top right;
+            background-attachment: scroll;
+        }
+        .main section.page2 #description-page2{
+            font-family: 'Prompt', sans-serif;
         }
         .main section.page3 {
-        background: rgb(207, 169, 152) no-repeat 156px -150px ;
+            /* background: rgb(207, 169, 152) no-repeat 156px -150px ; */
+            background:#efefed;
+            background-image: url("787868.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: bottom center;
+            background-attachment: scroll;
+        }
+        .main section.page3 #description-page3{
+            font-family: 'Prompt', sans-serif;
         }
     </style>
 </head>
 <body>
     <div class="wrapper">	
 	    <div class="main">
+            <section class="title-page">
+                <div class="heading">
+                    <h1>Ministry of Energy of Thailand's budget provided</h1>
+                </div>
+            </section>
+
             <section class="page1">
-                <h1 style="padding-bottom: 20px">Ministry of Energy of Thailand's budget provided</h1>
-                    <div align="center" style="padding-bottom: 20px;">
-                        
+                    
+                    <div align="center" style="padding-bottom: 20px;padding-top: 50px;">
                         <div id="Ministry_line" style="width: 900px; height: 500px;"></div>
-                        <div style="width: 900px; height: 100px;">
+                        <div id="description-page1" style="width: 900px; height: 150px;">
                             กราฟแสดงการเปลี่ยนแปลงของงบประมาณของกระทรวงพลังงานโดยแสดงเป็น Line Chart </br>
-                            เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562
+                            เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562</br>
+                            ซึ่งจะเห็นได้ว่า ช่วงปี 2553-2558 งบประมาณของกระทรวงพลังงานลดลง</br>
+                            และนั้นเป็นช่วงที่ราคาน้ำมันตลาดโลกสูงขึ้นมากอีกด้วย เช่น เบนซิน 95 ในปี 2554 อยู่ที่ 47.9</br>
+                            และยังมีข่าวสารอื่นๆที่กระทบต่อภาครัฐ เช่น ประสบอุทกภัย, มีการชุมนุมบ่อยครั้ง </br>
+                            ทำให้ มีส่วนในการตัดงบส่วนพลังงานไปใช้กับกระทรวงอื่นอีกด้วย</br>
                         </div>
                         <footer ><font size="2"><b>Tip:</b> This is a Final project of 01204314 Statistics for Computer Engineering Applications.</font></footer>
                     </div>
@@ -101,9 +152,12 @@
             <section class="page2">
                 <div align="center" style="padding-bottom: 20px;padding-top: 50px;">
                 <div id="All_Sub_Depart_line" style="width: 900px; height: 500px;"></div>
-                <div style="width: 900px; height: 100px;">
+                <div id="description-page2" style="width: 900px; height: 150px;">
                     กราฟแสดงการเปลี่ยนแปลงของงบประมาณแต่ละกรมในสังกัตกระทรวงพลังงานโดยแสดงเป็น Line Chart </br>
-                    เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562
+                    เพื่อให้เห็นการเปลี่ยนแปลงของกราฟตั้งแต่ปี 2551 - 2562</br>
+                    จากการทำให้เห็นว่า งบประมาณแต่ละกรมนั้น ในแต่ละปี แบ่งด้วยอัตราส่วนใกล้เคียงปีก่อนๆ โดยดูได้จากความชันกราฟ</br>
+                    ในช่วงปี 2553-2559 นั้น กราฟ ค่อนข้างอยู่ในระดับใกล้เคียงกัน อาจมีการเพิ่มลด ของแต่ละกรมบ้าง แต่โดยรวมถือว่าใกล้เคียงในแต่ละปี</br>
+                    สืบเนื่องจากการตัดงบประมาณในช่วงปี 2553-2558 ดังนั้น งบประมาณในแต่ละกรม ย่อมลดลงด้วยเช่นกัน</br>
                 </div>
                 <footer ><font size="2"><b>Tip:</b> This is a Final project of 01204314 Statistics for Computer Engineering Applications.</font></footer>
 
@@ -113,9 +167,9 @@
             <section class="page3">
                 <div align="center" style="padding-bottom: 20px;padding-top: 50px;">
                     <div id="Ministry_step" style="width: 900px; height: 500px;"></div>
-                    <div style="width: 900px; height: 100px;">
-                    กราฟข้างต้นแสดงให้ถึงเปอร์เซ็นทีของงบประมาณที่ใช้ในแต่ละปี ซึ่งจากกราฟทำให้ทราบว่าในแต่ละปี</br>
-                    งบประมาณโดยมากใช้ไปกับกรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน และ สํานักงานปลัดกระทรวงพลังงาน
+                    <div id="description-page3" style="width: 900px; height: 100px;">
+                        กราฟข้างต้นแสดงให้ถึงเปอร์เซ็นต์ทีของงบประมาณที่ใช้ในแต่ละปี ซึ่งจากกราฟทำให้ทราบว่าในแต่ละปี</br>
+                        งบประมาณโดยมากใช้ไปกับกรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน และ สํานักงานปลัดกระทรวงพลังงาน </br>
                     </div>
                     <footer ><font size="2"><b>Tip:</b> This is a Final project of 01204314 Statistics for Computer Engineering Applications.</font></footer>
 
@@ -130,6 +184,7 @@
             loop: true,
             responsiveFallback: false
         });
+        
     </script>
 </body>
 </html>
